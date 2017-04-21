@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Toggle Header Visibility on Scroll</title>
+<style>
+* { margin: 0; padding: 0; border: 0; }
+body {
+	padding-top: 80px;
+}
+.header {
+	position: fixed;
+	top: 0; right: 0; left: 0;
+	width: 100%;
+	height: 80px; line-height: 80px;
+	background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 0 10px 0 #ccc;
+    text-align: center;
+	z-index: 99;
+}
+p {
+	text-align: center;
+	line-height: 10em;
+}
+</style>
+</head>
+<body>
+<div class="header">Toggle Header Visibility on Scroll</div>
+<p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p>
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<script>
+$(function() {
+	$header = $('.header');
+
+	var $window = $(window),
+		$document = $(document),
+		scrollThrottleTimer = null,
+		throttleDelay = 70,
+		lastScrollHandlerRun = 0,
+		previousScrollTop = 0,
+		windowHeight = $window.height(),
+		visible = true,
+		hideOffset = 100,
+		animationDuration = 300;
+
+	function hideHeader() {
+		if (!visible) return;
+		$header.animate({
+			top: '-80px'
+		}, {
+			queue: false,
+			duration: animationDuration
+		});
+		visible = false;
+	}
+
+	function showHeader() {
+		if (visible) return;
+		$header.animate({
+			top: '0'
+		}, {
+			queue: false,
+			duration: animationDuration
+		});
+		visible = true;
+	}
+
+	function detectHeaderState() {
+		var scrollTop = $window.scrollTop(),
+			scrollDelta = scrollTop - previousScrollTop;
+
+		previousScrollTop = scrollTop;
+
+		if (scrollDelta < 0) {
+			if (visible) return;
+			if (scrollTop <= hideOffset) showHeader();
+		} else if (scrollDelta > 0) {
+			if (!visible) {
+				if (scrollTop + windowHeight == $document.height()) showHeader();
+				return;
+			}
+			if (scrollTop >= hideOffset) hideHeader();
+		}
+	}
+
+	function scrollHandler() {
+		lastScrollHandlerRun = new Date().getTime();
+		detectHeaderState();
+	}
+
+	$document.on('scroll', function() {
+		if (new Date().getTime() - lastScrollHandlerRun > throttleDelay) {
+			scrollHandler();
+		} else {
+			clearTimeout(scrollThrottleTimer);
+			scrollThrottleTimer = setTimeout(function() {
+				scrollHandler();
+			}, throttleDelay);
+		}
+	});
+})
+</script>
+</body>
+</html>
