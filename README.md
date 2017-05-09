@@ -14,3 +14,5 @@ js代码段收藏夹
 页面滚动时显示或隐藏顶部导航 [toggle-header-visibility-on-scroll/index.html](https://github.com/YopheeHsin/js-snippets/blob/master/toggle-header-visibility-on-scroll/index.html) - [[demo]](http://yopheehsin.github.io/demo/js-snippets/toggle-header-visibility-on-scroll/index.html)
 
 JS中使用整段多行HTML [multi-line-html-strings-in-js.js](https://github.com/YopheeHsin/js-snippets/blob/master/multi-line-html-strings-in-js.js) - [[demo]](http://yopheehsin.github.io/demo/js-snippets/multi-line-html-strings-in-js.html)
+
+倒计时30秒后重发验证码 [send-verification-codes-after-30-seconds.html](https://github.com/YopheeHsin/js-snippets/blob/master/send-verification-codes-after-30-seconds.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/js-snippets/blob/master/send-verification-codes-after-30-seconds.html)

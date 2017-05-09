@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Send Verification Codes after 30 Seconds</title>
+<style>
+* { margin: 0; padding: 0; border: 0; }
+body { padding: 100px 30%; }
+.ipt {
+	position: relative;
+	width: 100%; height: 50px;
+	margin-top: 15px;
+	border: 1px solid #dcdcdc;
+}
+.ipt input {
+	width: 100%; height: 50px;
+	background-color: transparent;
+	border-width: 0;
+	outline: 0;
+	text-indent: 10px;
+	font-size: 14px;
+}
+#send {
+	position: absolute;
+	right: 0; top: 0;
+	width: 90px; height: 50px;
+	line-height: 50px;
+	background-color: #A5C532;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	user-select: none;
+	cursor: pointer;
+}
+#send.dis {
+	background-color: #dcdcdc;
+	cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+<div class="ipt">
+	<div id="send">发送验证码</div>
+	<input type="tel" value="您的手机号" onfocus="if (this.value == '您的手机号') {this.value = '';}" onblur="if (this.value == '') {this.value = '您的手机号';}">
+</div>
+
+<script>
+var sendBtn = document.getElementById('send');
+var InterValObj;
+var count = 30;
+var curCount;
+
+function remainTime() {
+	if (curCount == 0) {
+		window.clearInterval(InterValObj);
+		sendBtn.classList.remove('dis');
+		sendBtn.textContent = '重发验证码';
+	} else {
+		sendBtn.textContent = curCount + '秒后重发';
+		curCount--;
+	}
+}
+
+function sendCaptcha() {
+	curCount = count;
+	sendBtn.classList.add('dis');
+	InterValObj = window.setInterval(remainTime, 1000);
+}
+
+sendBtn.addEventListener('click', function() {
+	if (sendBtn.classList.contains('dis')) return;
+	sendCaptcha();
+});
+</script>
+</body>
+</html>
