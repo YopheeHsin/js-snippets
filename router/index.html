@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Router</title>
+<style>
+* { margin: 0; padding: 0; border: 0; }
+#app { padding: 50px; text-align: center; font-size: 45px; }
+nav { text-align: center; }
+a { display: inline-block; padding: 20px; font-size: 27px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<nav><a href="#!index">index</a> / <a href="#!search/js">search</a></nav>
+
+<script src="router.js"></script>
+<script>
+
+function consoleApp(val) {
+	var element = document.getElementById('app');
+	if (element.textContent) {
+		element.textContent = val;
+	} else {
+		element.innerText = val;
+	}
+}
+
+var router = new Router();
+router.add('index', function() {
+    consoleApp('index');
+});
+router.add('search', function(kw) {
+    consoleApp('search: ' + kw);
+});
+router.start();
+</script>
+</body>
+</html>
