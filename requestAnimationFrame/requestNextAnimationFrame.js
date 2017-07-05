@@ -73,15 +73,15 @@ window.requestNextAnimationFrame = (function() {
 		// };
 
 		function(callback, element) {
-            var currTime = new Date().getTime();
-            var timeToCall = Math.max(0, 1000 / 60 - (currTime - lastTime));
-            var id = window.setTimeout(function() {
-                    callback(currTime + timeToCall);
-                },
-                timeToCall);
-            lastTime = currTime + timeToCall;
-            return id;
-        };
+			var currTime = new Date().getTime();
+			var timeToCall = Math.max(0, 1000 / 60 - (currTime - lastTime));
+			var id = window.setTimeout(function() {
+					callback(currTime + timeToCall);
+				},
+				timeToCall);
+			lastTime = currTime + timeToCall;
+			return id;
+		};
 }());
 
 window.cancelNextRequestAnimationFrame = window.cancelRequestAnimationFrame ||
@@ -93,5 +93,5 @@ window.cancelNextRequestAnimationFrame = window.cancelRequestAnimationFrame ||
 	window.msCancelRequestAnimationFrame ||
 	// clearTimeout;
 	function(id) {
-        clearTimeout(id);
-    };
+		clearTimeout(id);
+	};
