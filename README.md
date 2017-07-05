@@ -21,3 +21,5 @@ JS中使用整段多行HTML [multi-line-html-strings-in-js.js](https://github.co
 
 hash路由 [router.js](https://github.com/YopheeHsin/js-snippets/blob/master/router/router.js) - [[demo]](http://yopheehsin.github.io/demo/js-snippets/router/#!index)
 
+requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/YopheeHsin/js-snippets/blob/master/requestAnimationFrame/requestNextAnimationFrame.js) - [[demo]](http://yopheehsin.github.io/demo/js-snippets/requestAnimationFrame/index.html)
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>requestAnimationFrame</title>
+<style>
+* { margin: 0; padding: 0; border: 0; }
+#container div {
+	line-height: 150px;
+	text-align: center;
+	font-size: 50px;
+	color: #ccc;
+}
+#container :nth-child(odd) {
+	background-color: #fff;
+}
+#container :nth-child(even) {
+	background-color: #f0f0f0;
+}
+#top {
+	position: fixed;
+	right: 50px; bottom: 50px;
+	width: 50px;
+	height: 50px; line-height: 50px;
+	border-radius: 50%;
+	background-color: #666;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 0 5px 1px #333;
+}
+</style>
+</head>
+<body>
+
+<div id="container"></div>
+<div id="top">Top</div>
+
+<script src="requestNextAnimationFrame.js"></script>
+<script>
+var i = 1, htmlStr = '';
+while (i < 18) { htmlStr += '<div>' + i + '</div>'; i++; }
+document.getElementById('container').innerHTML = htmlStr;
+
+
+var animaId;
+var scrollToTop = function() {
+    var st = document.body.scrollTop;
+    st -= 10;
+    if (st < 0) st = 0;
+    document.body.scrollTop = st;
+    if (st > 0) animaId = requestAnimationFrame(scrollToTop);
+};
+
+document.getElementById('top').onclick = function() {
+    if (document.body.scrollTop > 0) scrollToTop();
+};
+
+// cancelNextRequestAnimationFrame(animaId);
+</script>
+</body>
+</html>
