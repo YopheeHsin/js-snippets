@@ -23,3 +23,4 @@ hash路由 [router.js](https://github.com/YopheeHsin/js-snippets/blob/master/rou
 
 requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/YopheeHsin/js-snippets/blob/master/requestAnimationFrame/requestNextAnimationFrame.js) - [[demo]](http://yopheehsin.github.io/demo/js-snippets/requestAnimationFrame/index.html)
 
+使用window.open打开新浏览器窗口 [popupWindow.js](https://github.com/YopheeHsin/js-snippets/blob/master/popupWindow.js)
