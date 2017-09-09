@@ -26,3 +26,5 @@ requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/Yo
 使用window.open打开新浏览器窗口 [popupWindow.js](https://github.com/YopheeHsin/js-snippets/blob/master/popupWindow.js)
 
 数组去重 [remove-duplicates-from-array.js](https://github.com/YopheeHsin/js-snippets/blob/master/remove-duplicates-from-array.js)
+
+树形结构递归，层级分析 [JSON-Tree.js](https://github.com/YopheeHsin/js-snippets/blob/master/JSON-Tree.js)
