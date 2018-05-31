@@ -30,3 +30,5 @@ requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/Yo
 树形结构递归，层级分析 [JSON-Tree.js](https://github.com/YopheeHsin/js-snippets/blob/master/JSON-Tree.js)
 
 数据类型判断 [check-data-types.js](https://github.com/YopheeHsin/js-snippets/blob/master/check-data-types.js)
+
+计算文本真实显示宽度 [text-real-length.js](https://github.com/YopheeHsin/js-snippets/blob/master/text-real-length.js)
