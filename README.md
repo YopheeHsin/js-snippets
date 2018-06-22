@@ -34,3 +34,5 @@ requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/Yo
 计算文本真实显示宽度 [text-real-length.js](https://github.com/YopheeHsin/js-snippets/blob/master/text-real-length.js)
 
 深拷贝 [deepClone.js](https://github.com/YopheeHsin/js-snippets/blob/master/deepClone.js)
+
+颜色加深或减淡 [get-dark-or-light-color.js](https://github.com/YopheeHsin/js-snippets/blob/master/get-dark-or-light-color.js)
