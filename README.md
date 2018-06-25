@@ -36,3 +36,7 @@ requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/Yo
 深拷贝 [deepClone.js](https://github.com/YopheeHsin/js-snippets/blob/master/deepClone.js)
 
 颜色加深或减淡 [get-dark-or-light-color.js](https://github.com/YopheeHsin/js-snippets/blob/master/get-dark-or-light-color.js)
+
+localStorage [localStorage.js](https://github.com/YopheeHsin/js-snippets/blob/master/localStorage.js)
+
+
