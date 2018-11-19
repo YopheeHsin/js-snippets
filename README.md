@@ -40,3 +40,5 @@ requestAnimationFrame动画 [requestNextAnimationFrame.js](https://github.com/Yo
 localStorage [localStorage.js](https://github.com/YopheeHsin/js-snippets/blob/master/localStorage.js)
 
 正则汇总 [RegExp.js](https://github.com/YopheeHsin/js-snippets/blob/master/RegExp.js)
+
+千分位格式化 [toThousands.js](https://github.com/YopheeHsin/js-snippets/blob/master/toThousands.js)
