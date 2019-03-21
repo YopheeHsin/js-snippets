@@ -42,3 +42,5 @@ localStorage [localStorage.js](https://github.com/YopheeHsin/js-snippets/blob/ma
 正则汇总 [RegExp.js](https://github.com/YopheeHsin/js-snippets/blob/master/RegExp.js)
 
 千分位格式化 [toThousands.js](https://github.com/YopheeHsin/js-snippets/blob/master/toThousands.js)
+
+替代jQuery [no-jQuery.js](https://github.com/YopheeHsin/js-snippets/blob/master/no-jQuery.js)
